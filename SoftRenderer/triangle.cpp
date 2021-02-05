@@ -3,6 +3,10 @@
 
 // Constructors + Destructor -------------------
 
+triangle::triangle() {
+	vertices = new vec3*[3];
+}
+
 triangle::triangle(vec3* a, vec3* b, vec3* c) {
 	vertices = new vec3*[3]{ a, b, c };
 }
@@ -13,6 +17,7 @@ triangle::triangle(const triangle& other) {
 }
 
 triangle::triangle(triangle&& other) noexcept {
+	delete[] vertices;
 	vertices = std::exchange(other.vertices, nullptr);
 }
 
@@ -32,6 +37,7 @@ triangle& triangle::operator=(const triangle& other) {
 triangle& triangle::operator=(triangle&& other) noexcept {
 	if (this == &other) return *this;
 
+	delete[] vertices;
 	vertices = std::exchange(other.vertices, nullptr);
 	return *this;
 }

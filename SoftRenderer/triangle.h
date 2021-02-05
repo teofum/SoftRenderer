@@ -9,6 +9,10 @@ private:
 public:
 	// Constructors + Destructor -------------------
 
+	// Default constructor for initialization
+	// This triangle is useless (null vertices) but can be assigned to
+	triangle();
+
 	triangle(vec3*, vec3*, vec3*);
 	triangle(const triangle&);
 	triangle(triangle&&) noexcept;

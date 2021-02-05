@@ -142,12 +142,14 @@
     <ClInclude Include="internal.h" />
     <ClInclude Include="lib.h" />
     <ClInclude Include="triangle.h" />
+    <ClInclude Include="triangleMesh.h" />
     <ClInclude Include="utils.h" />
     <ClInclude Include="vec3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp" />
     <ClCompile Include="triangle.cpp" />
+    <ClCompile Include="triangleMesh.cpp" />
     <ClCompile Include="vec3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
