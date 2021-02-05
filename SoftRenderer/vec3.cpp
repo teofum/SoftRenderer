@@ -1,26 +1,6 @@
 #include "internal.h"
 #include "lib.h"
 
-// Assignment operators -------------------------
-
-vec3& vec3::operator=(const vec3& v) {
-	if (this == &v) return *this;
-
-	x = v.x;
-	y = v.y;
-	z = v.z;
-	return *this;
-}
-
-vec3& vec3::operator=(vec3&& v) noexcept {
-	if (this == &v) return *this;
-
-	x = v.x;
-	y = v.y;
-	z = v.z;
-	return *this;
-}
-
 // Comparison operators ------------------------
 
 bool vec3::operator==(const vec3& v) const {

@@ -12,17 +12,6 @@ public:
 	vec3(double x, double y, double z)
 		:x(x), y(y), z(z) { };
 
-	vec3(const vec3& v)
-		:x(v.x), y(v.y), z(v.z) { };
-
-	vec3(vec3&& v) noexcept
-		:x(v.x), y(v.y), z(v.z) { };
-
-	// Assignment operators ------------------------
-
-	vec3& operator=(const vec3& v);
-	vec3& operator=(vec3&& v) noexcept;
-
 	// Comparison operators ------------------------
 
 	bool operator==(const vec3& v) const;
