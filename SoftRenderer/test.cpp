@@ -7,15 +7,14 @@ std::ostream& operator<<(std::ostream& os, const vec3& vector) {
 }
 
 int main() {
-	surface sf(20, 20);
-	for (int i = 0; i < 20; i++) for (int j = 0; j < 20; j++)
-		sf.putPixel(i, j, vec3(i / 20.0, j / 20.0, 0.0));
+	int w = 360, h = 240;
 
-	vec3 value;
-	for (int i = 0; i < 20; i++) for (int j = 0; j < 20; j++) {
-		sf.getPixel(i, j, value);
-		std::cout << value << std::endl;
-	}
+	surface sf(w, h);
+	for (int i = 0; i < w; i++) for (int j = 0; j < h; j++)
+		sf.putPixel(i, j, vec3(i / 60.0, j / 60.0, (j / 60)/4.0));
+
+	ppmWriter writer("test");
+	writer.write(sf);
 
 	return 0;
 }

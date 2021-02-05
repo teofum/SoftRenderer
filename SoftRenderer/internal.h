@@ -5,3 +5,5 @@
 #include "triangle.h"
 #include "triangleMesh.h"
 #include "surface.h"
+#include "writer.h"
+#include "ppmWriter.h"
